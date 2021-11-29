@@ -12,8 +12,7 @@
 
 .mainStyle {
 	background-color: black;
-	background-image: url(bg1.jpg), url(bg2.jpg);
-	background-repeat: repeat, repeat;
+	background-image: url(bg1.jpg);
 	background-blend-mode: screen;
 	color: #EB8800;
 	font-family: Arial;
