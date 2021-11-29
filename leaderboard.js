@@ -100,7 +100,7 @@ function loadTableData(items) {
     const table = document.getElementById("testBody");
     items.forEach(item => {
         let row = table.insertRow();
-        let cell0 = "test"
+        let cell0 = "test";
         let cell1 = row.insertCell(0);
         cell0.innerHTML = item[0];
         let cell2 = row.insertCell(1);
