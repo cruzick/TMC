@@ -10,12 +10,7 @@
 	background-blend-mode: screen;
 	color: #EB8800;
 	font-family: Arial;
-	text-align: center;
-
-	animation-name: bgAnim;
-	animation-duration: 120s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
+	text-align: center;	
 }
 
 .plainButton {
