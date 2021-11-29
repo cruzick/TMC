@@ -1,12 +1,6 @@
 @import "susy";
 @import "compass/reset";
-@keyframes bgAnim {
-    0%   {background-position: 0px   0px,   0px  0px;}
-    25%  {background-position: 0px 180px, 360px  0px;}
-    50%  {background-position: 0px 360px, 720px  0px;}
-    75%  {background-position: 0px 540px, 1080px 0px;}
-    100% {background-position: 0px 720px, 1440px 0px;}
-}
+
 
 @font-face { font-family: VampireWars; src: url('VampireWars.otf'); } 
 
