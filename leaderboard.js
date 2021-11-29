@@ -100,12 +100,11 @@ function loadTableData(items) {
     const table = document.getElementById("testBody");
     items.forEach(item => {
         let row = table.insertRow();
-        let cell0 = "test";
-        let cell1 = row.insertCell(0);
+        let cell0 = row.insertCell(0);
         cell0.innerHTML = item[0];
-        let cell2 = row.insertCell(1);
+        let cell1 = row.insertCell(1);
         cell1.innerHTML = item[1].mined.toFixed(4) + " TLM";
-        let cell3 = row.insertCell(2);
+        let cell2 = row.insertCell(2);
         cell2.innerHTML = item[1].count;
     });
 }
