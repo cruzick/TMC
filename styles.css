@@ -6,9 +6,9 @@
 
 .mainStyle {
 	background-color: black;
-	background-image: url(bg1.jpg);
-	background-blend-mode: screen;
-	color: #EB8800;
+	/*background-image: url(bg1.jpg);
+	background-blend-mode:screen;
+	*/color: #EB8800;
 	font-family: Arial;
 	text-align: center;	
 }

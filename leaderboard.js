@@ -1,8 +1,8 @@
 const zeroPad = (num, places) => String(num).padStart(places, '0')
 
-window.onload = function() {
-    run();
-};
+//window.onload = function() {
+//   run();
+//};
 
 async function run() {
     let resultField = document.getElementById("resultField");
