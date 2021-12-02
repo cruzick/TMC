@@ -14,6 +14,7 @@
 	background-color: black;
 	background-image: url(bg1.jpg);
 	background-blend-mode: screen;
+	background-size: cover;
 	color: #EB8800;
 	font-family: Arial;
 	text-align: center;	
