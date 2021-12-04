@@ -1,43 +1,204 @@
-<!-- <!DOCTYPE HTML> -->
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <title>Leaderboard</title>
-      <link href="styles.css" rel="stylesheet">
-      <script src="leaderboard.js"></script>
-   </head>
-   <body class="mainStyle">
-     <img src="./TMC-Logo.png" style="vertical-align: middle;
-     width: 350px;
-     height: 350px;
-     border-radius: 50%;animation: glow 1.5s linear infinite alternate">
-     <br> 
-      <span class="shiny">
-		<span class="inner-shiny">Leaderboard</span>
-		</span>
-		<br>
-      <pre id="curr_event"> </pre>
-      <div class="row" style="width: 1000px; margin: auto;">
-      <div class="column" style="float: left; width: 50%;">
-         <br>
-         <table id="myTable" class="table">
-            <thead>
-               <tr>
-                  <th>Miner</th>
-                  <th>Sum. Mined</th>
-                  <th>Mine count</th>
-               </tr>
-            </thead>
-            <tbody id="testBody"></tbody>
-         </table>
-      </div>
-      <div class="column">
-         <h3 style='font-size: 35px; font-family:"VampireWars"'>
-         Record holders</h3>
-         <pre style='text-align: left;' id="resultField"> </pre>
-      </div>
-      </div>
-   </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="leaderboard.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float:inherit;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: right;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  float: right;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+
+.body {
+  background: url(./bg1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.table, th, td {
+  border: 1px solid rgb(128, 128, 128);
+  border-collapse: collapse;
+  background-color: rgba(32, 32, 32, 0.45);
+  padding: 4px 24px 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vw;
+}
+
+.shiny
+{
+  color: #F5C21B;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5C21B), to(#D17000));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 9vw;
+  font-weight: 900;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.shiny::before
+{
+	background-position: -180px;
+	-webkit-animation: flare 5s infinite;
+  -webkit-animation-timing-function: linear;
+  background-image: linear-gradient(65deg, transparent 20%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.3) 27%, transparent 27%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  content: "Leaderboard";
+  color: #FFF;
+  display: block;
+  padding-right: 140px;
+  position: absolute;
+}
+
+.shiny::after
+{
+  content: "Leaderboard";
+  color: #FFF;
+  display: block;
+  position: absolute;
+  text-shadow: 0 1px #6E4414, 0 2px #6E4414, 0 3px #6E4414, 0 4px #6E4414, 0 5px #6E4414, 0 6px #6E4414, 0 7px #6E4414, 0 8px #6E4414, 0 9px #6E4414, 0 10px #6E4414;
+  top: 0;
+  z-index: -1;
+}
+
+.inner-shiny::after, .inner-shiny::before
+{
+		-webkit-animation: sparkle 5s infinite;
+  -webkit-animation-timing-function: linear;
+	background: #FFF;
+  border-radius: 100%;
+  box-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0 0 25px #FFF, 0 0 30px #FFF, 0 0 35px #FFF;
+  content: "Leaderboard";
+  display: block;
+  height: 10px;
+  opacity: 0.7;
+  position: absolute;
+  width: 10px;
+}
+
+.inner-shiny::before
+{
+	-webkit-animation-delay: 0.2s;
+  height: 7px;
+  left: 0.12em;
+  top: 0.8em;
+  width: 7px;
+}
+
+.inner-shiny::after
+{
+  top: 0.32em;
+  right: -5px;
+}
+
+@-webkit-keyframes flare
+{
+  0%   { background-position: -180px; }
+  30%  { background-position: 500px; }
+  100% { background-position: 500px; }
+}
+
+@-webkit-keyframes sparkle
+{
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  40%  { opacity: 0.8; }
+  60%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;background: url(./bg1.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover; -o-background-size: cover;
+background-size: cover;
+">
+<div style="background-color:rgb(229, 229, 229, .4);padding:vw;text-align:center;">
+  <img src="./TMC-Logo.png"  alt="The Merchant Circle logo"  style="box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);width: 17.5%; height: auto;border-radius: 50%;animation: glow 1.5s linear infinite alternate">
+  <br>
+  <span class="shiny">
+    <span class="inner-shiny">Leaderboard</span>
+  </span>
+  <pre id="curr_event"> </pre>
+</div>
+
+
+
+<div style="overflow:auto">
+  <div class="menu">
+  </div>
+
+  <div class="main">
+    <table id="myTable" class="table">
+      <thead>
+         <tr>
+            <th>Miner</th>
+            <th>Sum. Mined</th>
+            <th>Mine count</th>
+         </tr>
+      </thead>
+      <tbody id="testBody"></tbody>
+   </table>
+</div>
+
+   
+
+
+  <div class="right">
+    <h3 style='font-size: 35px;'>
+      Record holders</h3>
+      <pre style='text-align: left;' id="resultField"> </pre>
+  </div>
+</div>
+
+<div style="background-color:rgb(229, 229, 229, .4);text-align:center;padding:10px;margin-top:7px;">Welcome!</div>
+
+</body>
 </html>
+
