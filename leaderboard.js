@@ -7,7 +7,7 @@ window.onload = function() {
 async function run() {
     let resultField = document.getElementById("resultField");
     resultField.textContent = "Loading...";
-
+    totalmined = 0;
     const from = new Date("2021-12-01T00:00:00Z");
     const to = new Date("2021-12-15T00:00:00Z")
     let results = await downloadData(from, to);
@@ -33,11 +33,13 @@ async function run() {
             let time = results[i].block_timestamp;
             let miner = results[i].miner;
 
+            totalmined = mined+totalmined;
+
             if (new Date(time) < from) {
                 usedResultsCnt = i + 1;
                 break;
             }
-
+            if ("ooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wam".includes(results[i].miner)) {
             // if miner is already in
             if (miner in minerDict) {
                 minerDict[miner].mined += mined;
@@ -54,6 +56,8 @@ async function run() {
             }
         }
 
+        }
+
         console.log("Total items returned: " + results.length + " from that used: " + usedResultsCnt);
         console.log("Unique miners: " + Object.keys(minerDict).length);
 
@@ -68,7 +72,8 @@ async function run() {
         });
 
         loadTableData(items);
-        resultField.textContent = "Max amount by single mine:" + "\n" +
+        
+        resultField.textContent =  "Total mined (not just whitelisted): " + totalmined.toFixed(4) + "\n" + "\n" + "Max amount by single mine:" + "\n" +
             maxSingleMine.miner + "\n" +
             maxSingleMine.amount.toFixed(4) + " TLM" + "\n" +
             maxSingleMine.time.toISOString().replace('T', ' ').replace('Z', '') + " UTC" + "\n" +
@@ -98,14 +103,18 @@ async function run() {
 
 function loadTableData(items) {
     const table = document.getElementById("testBody");
+    rank = 1;
     items.forEach(item => {
         let row = table.insertRow();
         let cell0 = row.insertCell(0);
-        cell0.innerHTML = item[0];
+        cell0.innerHTML = rank;
         let cell1 = row.insertCell(1);
-        cell1.innerHTML = item[1].mined.toFixed(4) + " TLM";
+        cell1.innerHTML = item[0];
         let cell2 = row.insertCell(2);
-        cell2.innerHTML = item[1].count;
+        cell2.innerHTML = item[1].mined.toFixed(4) + " TLM";
+        let cell3 = row.insertCell(3);
+        cell3.innerHTML = item[1].count;
+        rank++;
     });
 }
 
