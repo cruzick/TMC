@@ -25,9 +25,9 @@
 }
 
 .main {
-  float: right;
-  width: 60%;
+  float:center;
   padding:0 1vw;
+  text-align: center
 }
 
 .right {
@@ -52,13 +52,15 @@
 }
 
 .table, th, td {
+  float:center;
   border: 1px solid rgb(128, 128, 128);
   border-collapse: collapse;
   background-color: rgba(32, 32, 32, 0.45);
   padding: 4px 24px 4px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 }
 
 .shiny
@@ -171,10 +173,12 @@ background-size: cover;
 
 
 <div style="overflow:auto">
-  <div class="menu">
-  </div>
-
   <div class="main">
+    <h3 style='font-size: 2vw;'>
+      Records</h3>
+      <pre style='text-align: center;' id="resultField"> </pre>
+  
+  <br>
     <table id="myTable" class="table">
       <thead>
          <tr>
@@ -186,19 +190,10 @@ background-size: cover;
       </thead>
       <tbody id="testBody"></tbody>
    </table>
-</div>
-
-   
-
-
-  <div class="right">
-    <h3 style='font-size: 2vw;'>
-      Record holders</h3>
-      <pre style='text-align: left;' id="resultField"> </pre>
   </div>
 </div>
 
-<div style="background-color:rgb(229, 229, 229, .4);text-align:center;padding:10vw;margin-top:vw;">Welcome!</div>
+<div style="background-color:rgb(229, 229, 229, .4);text-align:center;padding:1vw;">Welcome!  Please wait, it can take while for the data to load.</div>
 
 </body>
 </html>
