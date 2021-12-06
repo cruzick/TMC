@@ -40,7 +40,7 @@ async function run() {
                 break;
             }
            if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamDerjk.wam".includes(results[i].miner)) {
-         if miner is already in
+            // if miner is already in
             if (miner in minerDict) {
                 minerDict[miner].mined += mined;
                 minerDict[miner].count++;
