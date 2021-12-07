@@ -39,7 +39,7 @@ async function run() {
                 usedResultsCnt = i + 1;
                 break;
             }
-           //if ("LarryMcJay#5717cruzicK#5172ivan#1713Carrigan_TV#4763Kung_Lao#0269gargantu#9017joquity#8152Dimarik#3391XellyBoy#4547TheDutchChemist#3851MrBest#6016SunLight#3791AluSeph#3260mcblock2#3353AL HACHACHE#8172Kotomek#2127xorusthexeretik#5148Imperator#2336busatome#2073dnyyy#1342Adogg#6669finest#7501den4ik49#3337Yonasan#6444Jebenafaca#9987IslaWeda#6179SomeoneTookMelo#7646NaviSeph#2671Garima#8181Brandonlee90#9544NinjaPotato101#6178Sopata#7626Pr1ck1aD#1186".includes(results[i].miner)) {
+           if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamDerjk.wamdzsba.wam1fucs.wamG1drs.wame5iwc.wamwo5xg.wamaneb2.wam2wqbq.wamvvaxg.wam".includes(results[i].miner)) {
             // if miner is already in
             if (miner in minerDict) {
                 minerDict[miner].mined += mined;
@@ -54,7 +54,7 @@ async function run() {
                 maxSingleMine.time = new Date(time);
                 maxSingleMine.miner = miner;
             }
-       // }
+        }
 
         }
 
