@@ -39,7 +39,7 @@ async function run() {
                 usedResultsCnt = i + 1;
                 break;
             }
-           if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamDerjk.wamdzsba.wam1fucs.wamg1drs.wame5iwc.wamwo5xg.wamaneb2.wam2wqbq.wamvvaxg.wamfi5zk.wamjtec4.wamkbmb.wamjdhhg.wamvcrx2.wamy4kfg.wammnizi.wamhj3bq.wamk2jh.wamd1wzk.wam5giic.wamphlbq.wami2diy.wam3bcss.wam.vwzi.wamJt1zm.wammlgfq.wamkbyec.wamijlh2.wam".includes(results[i].miner)) {
+           if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamderjk.wamdzsba.wam1fucs.wamg1drs.wame5iwc.wamwo5xg.wamaneb2.wam2wqbq.wamvvaxg.wamfi5zk.wamjtec4.wamkbmb.wamjdhhg.wamvcrx2.wamy4kfg.wammnizi.wamhj3bq.wamk2jh.wamd1wzk.wam5giic.wamphlbq.wami2diy.wam3bcss.wam.vwzi.wamJt1zm.wammlgfq.wamkbyec.wamijlh2.wamfiphe.wamquhrc.wamagirc.wam".includes(results[i].miner)) {
             // if miner is already in
             if (miner in minerDict) {
                 minerDict[miner].mined += mined;
