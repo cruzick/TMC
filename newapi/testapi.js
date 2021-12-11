@@ -1,5 +1,3 @@
-const zeroPad = (num, places) => String(num).padStart(places, '0')
-
 window.onload = function() {
     run();
 };
@@ -101,26 +99,6 @@ async function run() {
 
 }
 
-function loadTableData(items) {
-    const table = document.getElementById("testBody");
-    rank = 1;
-    items.forEach(item => {
-        let row = table.insertRow();
-        let cell0 = row.insertCell(0);
-        cell0.innerHTML = rank;
-        let cell1 = row.insertCell(1);
-        cell1.innerHTML = item[0];
-        let cell2 = row.insertCell(2);
-        cell2.innerHTML = item[1].mined.toFixed(4);
-        let cell3 = row.insertCell(3);
-        cell3.innerHTML = item[1].count;
-        rank++;
-    });
-}
-
-
-// from is past, to is future
-// we are polling newest to oldest
 async function downloadData(from, to) {
 
     let doPollMore = true;
@@ -133,10 +111,8 @@ async function downloadData(from, to) {
         // because then the full sized poll will be returned (limit)
         // BUT AW has a bug, when the 'from' and 'to' is really near, and there are no action inside that interval
         // the API fails to return anything instead of returning an empty array in the response
-        let querry = 'https://api.alienworlds.io/v1/alienworlds/mines?landowner=aulxo.wam' +
-            '&sort=desc' +
-            '&from=' + from +
-            '&limit=2000';
+        let querry = 'https://wax.eosphere.io/v2/history/get_actions?account=aulxo.wam&skip=0&limit=300&sort=desc&transfer.from=m.federation';
+        querry += '&from=' + from.toISOString();
 
         if (lastPolledGlobSeq == Number.MAX_VALUE) {
             // we don't know where we are - use date
@@ -150,12 +126,12 @@ async function downloadData(from, to) {
         await fetch(querry)
             .then(response => response.json())
             .then(json => {
-                if (json && json.results && json.results.length > 0) {
+                if (json && json.actions > 0) {
 
                     retVal = retVal.concat(json.results);
                     lastPolledGlobSeq = json.results[json.results.length - 1].global_sequence;
 
-                    if (new Date(json.results[json.results.length - 1].block_timestamp) < from) {
+                    if (new Date(json.results[json.results.length - 1].timestamp) < from) {
                         doPollMore = false;
                     }
                 } else {
