@@ -5,11 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A Basic HTML5 Template</title>
+  <title>Commission Report</title>
   <script src="testapi.js"></script>
 </head>
 
 <body>
+   <label for="date-object">Date Object</label>
+<input type="date" id="dateBegin"  />
+<input id="run" type="button" value="run" onclick="run();" />
+
   <pre id="curr_event"> </pre>
   <h3 style='font-size: 2vw;'>
     Records</h3>
@@ -17,10 +21,8 @@
     <table id="myTable" class="table">
         <thead>
            <tr>
-              <th>Rank</th>
-              <th>Miner</th>
-              <th>Sum. Mined</th>
-              <th>Mine count</th>
+              <th>Profit Sharing Pot</th>
+              <th>Total Commission</th>
            </tr>
         </thead>
         <tbody id="testBody"></tbody>
