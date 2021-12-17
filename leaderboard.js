@@ -9,7 +9,7 @@ async function run() {
     resultField.textContent = "Loading...";
     totalmined = 0;
     const from = new Date("2021-12-01T00:00:00Z");
-    const to = new Date("2021-12-15T00:00:00Z")
+    const to = new Date("2021-12-31T00:00:00Z")
     let results = await downloadData(from, to);
     let usedResultsCnt = 0;
 
