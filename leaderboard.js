@@ -9,7 +9,7 @@ async function run() {
     resultField.textContent = "Loading...";
     totalmined = 0;
     const from = new Date("2021-12-01T00:00:00Z");
-    const to = new Date("2021-12-15T00:00:00Z")
+    const to = new Date("2021-12-31T00:00:00Z")
     let results = await downloadData(from, to);
     let usedResultsCnt = 0;
 
@@ -39,7 +39,7 @@ async function run() {
                 usedResultsCnt = i + 1;
                 break;
             }
-           if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamderjk.wamdzsba.wam1fucs.wamg1drs.wame5iwc.wamwo5xg.wamaneb2.wam2wqbq.wamvvaxg.wamm11ho.wamfi5zk.wamjtec4.wamkbmb.wamjdhhg.wamvcrx2.wamy4kfg.wammnizi.wamhj3bq.wamk2jh.wamd1wzk.wam5giic.wamphlbq.wami2diy.wam3bcss.wam.vwzi.wamjt1zm.wammlgfq.wamkbyec.wamijlh2.wamfiphe.wamquhrc.wamagirc.wamqx1jo.wamkdbhy.wam35aju.wame1abg.wamvmhbk.wamkixhe.wamtcsu.wamzofro.wamwqli2.wamgs3iy.wamrf5r4.wamfqkx.wam4smiu.wam.apqw.wam12vba.wamrqxz4.wamoq3qw.wambjscc.wama.czy.wameu1ba.wamhwjjg.wam1i2uujy1zk.wam532ho.wamjhkr4.wam".includes(results[i].miner)) {
+           if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamderjk.wamdzsba.wam1fucs.wamg1drs.wame5iwc.wamwo5xg.wamaneb2.wam2wqbq.wamvvaxg.wamm11ho.wamfi5zk.wamjtec4.wamkbmb.wamjdhhg.wamvcrx2.wamy4kfg.wammnizi.wamhj3bq.wamk2jh.wamd1wzk.wam5giic.wamphlbq.wami2diy.wam3bcss.wam.vwzi.wamjt1zm.wammlgfq.wamkbyec.wamijlh2.wamfiphe.wamquhrc.wamagirc.wamqx1jo.wamkdbhy.wam35aju.wame1abg.wamvmhbk.wamkixhe.wamtcsu.wamzofro.wamwqli2.wamgs3iy.wamrf5r4.wamfqkx.wam4smiu.wam.apqw.wam12vba.wamrqxz4.wamoq3qw.wambjscc.wama.czy.wameu1ba.wamhwjjg.wam1i2uu.wamjy1zk.wam532ho.wamjhkr4.wamqfhsu.wamynrzw.wam1rsyw.wambbmzu.wamttkiq.wam".includes(results[i].miner)) {
             // if miner is already in
             if (miner in minerDict) {
                 minerDict[miner].mined += mined;
