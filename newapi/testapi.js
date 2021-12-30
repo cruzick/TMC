@@ -11,8 +11,8 @@ async function run() {
     
     commission = 0;
     console.log(firstrun==1);
-    const from = new Date("2021-12-16T00:00:00.00Z");
-    const to = new Date("2021-12-17T00:00:00Z");
+    const from = new Date("2021-12-19T00:00:00.00Z");
+    const to = new Date("2021-12-20T00:00:00Z");
 
     if(firstrun==1){
         firstrun=0;        
