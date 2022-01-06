@@ -8,8 +8,8 @@ async function run() {
     let resultField = document.getElementById("resultField");
     resultField.textContent = "Loading...";
     totalmined = 0;
-    const from = new Date("2021-12-31T00:00:00Z");
-    const to = new Date("2021-12-31T23:59:59Z")
+    const from = new Date("2022-01-05T00:00:00Z");
+    const to = new Date("2022-01-05T23:59:59Z")
     let results = await downloadData(from, to);
     let usedResultsCnt = 0;
 
@@ -39,7 +39,7 @@ async function run() {
                 usedResultsCnt = i + 1;
                 break;
             }
-            if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamderjk.wamdzsba.wam1fucs.wamg1drs.wame5iwc.wamwo5xg.wamaneb2.wam2wqbq.wamvvaxg.wamm11ho.wamfi5zk.wamjtec4.wamkbmb.wamjdhhg.wamvcrx2.wamy4kfg.wammnizi.wamhj3bq.wamk2jh.wamd1wzk.wam5giic.wamphlbq.wami2diy.wam3bcss.wam.vwzi.wamjt1zm.wammlgfq.wamkbyec.wamijlh2.wamfiphe.wamquhrc.wamagirc.wamqx1jo.wamkdbhy.wam35aju.wame1abg.wamvmhbk.wamkixhe.wamtcsu.wamzofro.wamwqli2.wamgs3iy.wamrf5r4.wamfqkx.wam4smiu.wam.apqw.wam12vba.wamrqxz4.wamoq3qw.wambjscc.wama.czy.wameu1ba.wamhwjjg.wam1i2uu.wamjy1zk.wam532ho.wamjhkr4.wamqfhsu.wamynrzw.wam1rsyw.wambbmzu.wamttkiq.wamridz2.wam.cmi.wamctk.2.c.wamvke.2.c.wamfcaxe.wamgwyfo.wamawjk2.c.wambdjhi.wamcymem.wambkvay.wamiqnjo.wamkz3ji.wamxiwk2.c.wamzwcgs.wamfws.2.c.wamipzj.wam1jeyw.wamxltbo.wamman.e.c.wamyhzzu.wam.4rji.wamwcshk.wamlwcza.wambahk4.c.wameazwk.wamnp3yo.wamum.i2.wambqkhm.wam.yfcq.wam4wdzy.wamfcfzs.wampjk.4.c.wamxd.is.wammwsyw.wamzwcgs.wamp2e.g.c.wamftdbi.wam444jo.wamqhq.i.c.wamv3sx2.wamz1q.k.c.wambgh.4.c.wamulgem.wamockb2.wamn5xkq.c.wam5hjk4.c.wamnr4xg.wamtaud.wamfvej2.wamidkfi.wamiumkm.c.wamauvfw.wamauhkq.c.wamculba.wam1qkkq.c.wamj2l.q.c.wamxcez2.wamrhkja.wamkqvxa.wam5lgk..c.wamrbvjw.wamsdf.i.c.wamh2afy.wamucism.wamuxfi.wam2je.o.c.wam2hpqy.wamj5akq.c.wam4.kzs.wamkaa.q.c.wammrvkq.c.wamu4uzy.wamh22iq.wamdoxbw.wamev.he.wamcw.ue.wam".includes(results[i].miner)) {
+            if ("z.uxu.wamooiyo.wamsylhu.wamobpyq.wamgfowi.wamhknz2.wamntjrs.wamttkn2.wamfvaia.wamfqfyq.wamfozy4.wamf.vbg.wamlbjji.wam1aabm.wambd1vw.wamjjhra.wam2o5fi.wamvbbce.wamkzqx2.wamrkmx4.wamq2hu4.wamrzjhy.wamjivj.wamxgmzm.wamksvjg.wamtshwa.wamp1mjg.wampadjk.wamvgvgo.wamderjk.wamdzsba.wam1fucs.wamg1drs.wame5iwc.wamwo5xg.wamaneb2.wam2wqbq.wamvvaxg.wamm11ho.wamfi5zk.wamjtec4.wamkbmb.wamjdhhg.wamvcrx2.wamy4kfg.wammnizi.wamhj3bq.wamk2jh.wamd1wzk.wam5giic.wamphlbq.wami2diy.wam3bcss.wam.vwzi.wamjt1zm.wammlgfq.wamkbyec.wamijlh2.wamfiphe.wamquhrc.wamagirc.wamqx1jo.wamkdbhy.wam35aju.wame1abg.wamvmhbk.wamkixhe.wamtcsu.wamzofro.wamwqli2.wamgs3iy.wamrf5r4.wamfqkx.wam4smiu.wam.apqw.wam12vba.wamrqxz4.wamoq3qw.wambjscc.wama.czy.wameu1ba.wamhwjjg.wam1i2uu.wamjy1zk.wam532ho.wamjhkr4.wamqfhsu.wamynrzw.wam1rsyw.wambbmzu.wamttkiq.wamridz2.wam.cmi.wamctk.2.c.wamvke.2.c.wamfcaxe.wamgwyfo.wamawjk2.c.wambdjhi.wamcymem.wambkvay.wamiqnjo.wamkz3ji.wamxiwk2.c.wamzwcgs.wamfws.2.c.wamipzj.wam1jeyw.wamxltbo.wamman.e.c.wamyhzzu.wam.4rji.wamwcshk.wamlwcza.wambahk4.c.wameazwk.wamnp3yo.wamum.i2.wambqkhm.wam.yfcq.wam4wdzy.wamfcfzs.wampjk.4.c.wamxd.is.wammwsyw.wamzwcgs.wamp2e.g.c.wamftdbi.wam444jo.wamqhq.i.c.wamv3sx2.wamz1q.k.c.wambgh.4.c.wamulgem.wamockb2.wamn5xkq.c.wam5hjk4.c.wamnr4xg.wamtaud.wamfvej2.wamidkfi.wamiumkm.c.wamauvfw.wamauhkq.c.wamculba.wam1qkkq.c.wamj2l.q.c.wamxcez2.wamrhkja.wamkqvxa.wam5lgk..c.wamrbvjw.wamsdf.i.c.wamh2afy.wamucism.wamuxfi.wam2je.o.c.wam2hpqy.wamj5akq.c.wam4.kzs.wamkaa.q.c.wammrvkq.c.wamu4uzy.wamh22iq.wamdoxbw.wamev.he.wamcw.ue.wamwlhqy.wamn1b.s.c.wamvapxs.wan.qdwk.wamh.sxw.wam".includes(results[i].miner)) {
                 // if miner is already in
             if (miner in minerDict) {
                 minerDict[miner].mined += mined;
