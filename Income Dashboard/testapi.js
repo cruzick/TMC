@@ -26,8 +26,8 @@ async function run() {
     console.log(firstrun==1);
 
 // THESE ARE DATES THAT YOU CAN CHANGE
-    const from = new Date("2022-01-10T00:00:00.00Z");
-    const to = new Date("2022-01-10T23:59:59.59Z");
+    const from = new Date("2022-01-09T06:00:00.00Z");
+    const to = new Date("2022-01-10T05:59:59.59Z");
 
     if(firstrun==1){
         firstrun=0;        
