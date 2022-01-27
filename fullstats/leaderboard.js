@@ -8,7 +8,7 @@ async function run() {
     let resultField = document.getElementById("resultField");
     resultField.textContent = "Loading...";
     totalmined = 0;
-    const from = new Date("2022-01-2T00:00:00Z");
+    const from = new Date("2022-01-26T00:00:00Z");
     const to = new Date("2022-01-26T23:59:59Z")
     let results = await downloadData(from, to);
     let usedResultsCnt = 0;
