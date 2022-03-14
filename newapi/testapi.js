@@ -34,7 +34,7 @@ async function run() {
     if (results) {
         for (let i = 0; i < results.length; i++)   {        
             //adds up commission
-            if results[i].act.data.memo == "ALIEN WORLDS - Mined Trilium Profit Share" {
+            if (results[i].act.data.memo == "ALIEN WORLDS - Mined Trilium Profit Share") {
                 commission = results[i].act.data.amount + commission;
 
             }
