@@ -51,11 +51,13 @@ async function downloadData(from, to) {
     let retVal = []; // here comes the json.results
     let page = 1;
     let pagecount = 0;
+    let skip = 0;
 
     while (doPollMore) {
 
         //API query
-        let querry = 'https://api.waxsweden.org:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo=ALIEN WORLDS - Mined Trilium Profit Share' + '&limit=1000' + "&page=" + page +        '&sort=desc' + '&after=' + from.toISOString() + '&before=' + to.toISOString();
+        let querry = 'https://api.waxsweden.org:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo=ALIEN WORLDS - Mined Trilium Profit Share' + 
+        '&limit=1000' + "&page=" + page + "&skip=" + skip + '&sort=desc' + '&after=' + from.toISOString() + '&before=' + to.toISOString();
         
         console.log(querry);
         
@@ -64,15 +66,17 @@ async function downloadData(from, to) {
             .then(json => {
                 if (json && json.actions && json.actions.length > 0) {
 
-                    pagecount = Math.ceil((json.total.value/1000) -1 );
+                    pagecount = Math.ceil((json.total.value/1000));
                 
                     retVal = retVal.concat(json.actions);
-                    console.log(retVal)
+                    console.log(retVal);
+                    skip = skip *1000;
+
                     page = page + 1;
                     if (json.total.value/1000 <1) {
                         doPollMore = false;
                     }
-                    if (page==pagecount +) {
+                    if (page==pagecount + 1) {
                         doPollMore = false;
                     }
                     //Loop Killer (END OF RESULTS)
