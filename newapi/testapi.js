@@ -34,7 +34,11 @@ async function run() {
     if (results) {
         for (let i = 0; i < results.length; i++)   {        
             //adds up commission
-            commission = results[i].act.data.amount + commission;
+            if results[i].act.data.memo == "ALIEN WORLDS - Mined Trilium Profit Share" {
+                commission = results[i].act.data.amount + commission;
+
+            }
+           
             //console.log(results[i].act.data.amount + " " + i + " " + results[i].timestamp);
         }
 
@@ -67,7 +71,7 @@ async function downloadData(from, to) {
                 if (json && json.actions && json.actions.length > 0) {
 
                     pagecount = Math.ceil((json.total.value/1000));
-                
+                    
                     retVal = retVal.concat(json.actions);
                     console.log(retVal);
                     skip = skip + 1000;
