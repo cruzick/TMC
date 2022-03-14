@@ -31,6 +31,7 @@ async function run() {
                                to.toISOString().replace('T', ' ').substring(0, 19) + " UTC";
 
     // test for null
+    console(results.length);
     if (results) {
         for (let i = 0; i < results.length; i++)   {        
             //adds up commission
@@ -66,7 +67,7 @@ async function downloadData(from, to) {
             .then(json => {
                 if (json && json.actions && json.actions.length > 0) {
 
-                    pagecount = Math.ceil((json.total.value/1000));
+                    pagecount = Math.ceil((json.total.value/1000) -1 );
                     console.log(pagecount); 
                     //total returned results
                     console.log(json.total.value);
