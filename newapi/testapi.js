@@ -32,7 +32,7 @@ async function run() {
 
     // test for null
     if (results) {
-        for (let i = 0; i < results.length + 1; i++)   {        
+        for (let i = 0; i < results.length; i++)   {        
             //adds up commission
             commission = results[i].act.data.amount + commission;
             console.log(results[i].act.data.amount + " " + i + " " + results[i].act.data.timestamp);
@@ -66,7 +66,7 @@ async function downloadData(from, to) {
             .then(json => {
                 if (json && json.actions && json.actions.length > 0) {
 
-                    pagecount = Math.ceil((json.total.value/1000)-1);
+                    pagecount = Math.ceil((json.total.value/1000));
                     console.log(pagecount); 
                     //total returned results
                     console.log(json.total.value);
