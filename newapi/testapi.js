@@ -32,7 +32,7 @@ async function run() {
 
     // test for null
     if (results) {
-        for (let i = 0; i < results.length; i++)   {        
+        for (let i = 0; i < results.length + 1; i++)   {        
             //adds up commission
             commission = results[i].act.data.amount + commission;
             console.log(results[i].act.data.amount + " " + i + " " + results[i].act.data.timestamp);
