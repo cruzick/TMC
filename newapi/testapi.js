@@ -31,7 +31,6 @@ async function run() {
                                to.toISOString().replace('T', ' ').substring(0, 19) + " UTC";
 
     // test for null
-    console(results.length);
     if (results) {
         for (let i = 0; i < results.length; i++)   {        
             //adds up commission
