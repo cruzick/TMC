@@ -72,7 +72,7 @@ async function downloadData(from, to) {
                     if (json.total.value/1000 <1) {
                         doPollMore = false;
                     }
-                    if (page==pagecount) {
+                    if (page==pagecount +) {
                         doPollMore = false;
                     }
                     //Loop Killer (END OF RESULTS)
