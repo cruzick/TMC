@@ -67,9 +67,10 @@ async function downloadData(from, to) {
                 if (json && json.actions && json.actions.length > 0) {
 
                     pagecount = Math.ceil((json.total.value/1000) -1 );
-                    
+                
                     retVal = retVal.concat(json.actions);
-                    page = page+1;
+                    console.log(retVal)
+                    page = page + 1;
                     if (json.total.value/1000 <1) {
                         doPollMore = false;
                     }
