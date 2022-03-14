@@ -134,7 +134,7 @@ async function downloadData(from, to) {
         // because then the full sized poll will be returned (limit)
         // BUT AW has a bug, when the 'from' and 'to' is really near, and there are no action inside that interval
         // the API fails to return anything instead of returning an empty array in the response
-        let querry = 'https://api.alienworlds.io/v1/alienworlds/mines?landowner=lbjji.wam' +
+        let querry = 'https://api.alienworlds.io/v1/alienworlds/mines?landowner=aulxo.wam' +
             '&sort=desc' +
             '&limit=2000';
 
