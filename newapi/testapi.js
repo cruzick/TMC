@@ -49,15 +49,13 @@ async function downloadData(from, to) {
     let doPollMore = true;
     let lastPolledGlobSeq = Number.MAX_VALUE;
     let retVal = []; // here comes the json.results
-    let page = 0;
+    let page = 1;
     let pagecount = 0;
 
     while (doPollMore) {
 
         //API query
-        let querry = 'https://api.waxsweden.org:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo=ALIEN WORLDS - Mined Trilium Profit Share' +
-        '&sort=desc' + '&after=' + from.toISOString() + '&before=' + to.toISOString() + 
-        '&limit=1000' + "&page=" + page;
+        let querry = 'https://api.waxsweden.org:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo=ALIEN WORLDS - Mined Trilium Profit Share' + '&limit=1000' + "&page=" + page +        '&sort=desc' + '&after=' + from.toISOString() + '&before=' + to.toISOString();
         
         console.log(querry);
         
