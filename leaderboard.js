@@ -34,6 +34,7 @@ async function run() {
             let miner = results[i].miner;
 
             totalmined = mined+totalmined;
+            console.log(results[i].block_timestamp);
 
             if (new Date(time) < from) {
                 usedResultsCnt = i + 1;
