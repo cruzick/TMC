@@ -34,7 +34,8 @@ async function run() {
     if (results) {
         for (let i = 0; i < results.length; i++)   {        
             //adds up commission
-            commission = results[i].act.data.amount + commission; 
+            commission = results[i].act.data.amount + commission;
+            console.log(results[i].act.data.amount);
         }
 
         resultField.textContent =  "Total Commission: " + commission.toFixed(4);
