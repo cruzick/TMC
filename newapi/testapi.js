@@ -17,8 +17,8 @@ async function run() {
     if(firstrun==1){
         firstrun=0;        
     } else {
-        console.log(document.getElementById("start"));
-        from.setDate(document.getElementById("end"));
+        console.log(document.getElementById("dateBegin"));
+        from.setDate(document.getElementById("dateBegin"));
         console.log(from);
         to.setDate(from.getDate(from +1));
     } 
@@ -60,7 +60,7 @@ async function downloadData(from, to) {
     while (doPollMore) {
 
         //API query
-        let querry = 'https://api.waxsweden.org:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo="ALIEN WORLDS - Mined Trilium Profit Share"' + 
+        let querry = 'https://api.waxsweden.org:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo=ALIEN WORLDS - Mined Trilium Profit Share' + 
         '&limit=1000' + '&page=' + page + '&skip=' + skip + '&sort=desc' + '&after=' + from.toISOString() + '&before=' + to.toISOString();
         
         console.log(querry);
