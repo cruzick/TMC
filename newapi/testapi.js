@@ -60,7 +60,11 @@ async function downloadData(from, to) {
     while (doPollMore) {
 
         //API query
+<<<<<<< Updated upstream
         let querry = 'https://api.waxsweden.org:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo="ALIEN WORLDS - Mined Trilium Profit Share"' + 
+=======
+        let querry = 'https://wax.eu.eosamsterdam.net/:443/v2/history/get_actions?account=lbjji.wam&transfer.from=m.federation&memo=ALIEN WORLDS - Mined Trilium Profit Share' + 
+>>>>>>> Stashed changes
         '&limit=1000' + '&page=' + page + '&skip=' + skip + '&sort=desc' + '&after=' + from.toISOString() + '&before=' + to.toISOString();
         
         console.log(querry);
