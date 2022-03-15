@@ -10,10 +10,14 @@
 </head>
 
 <body>
-   <label for="date-object">Date Object</label>
-<input type="date" id="dateBegin"  />
-<input id="run" type="button" value="run" onclick="run();" />
-
+   <form action="/action_page.php">
+      <label for="fname">Enter start date/time in the following format: YYYY-MM-DDTHH:MM:SS.00Z</label><br>
+      <input type="text" id="start" name="Start" value="2022-03-14T00:00:00.00Z"><br>
+      <label for="lname">Enter end date/time in the following format: YYYY-MM-DDTHH:MM:SS.00Z</label><br>
+      <input type="text" id="end" name="End" value="2022-03-14T23:59:59.00Z"><br><br>
+      <input type="submit" value="Submit onclick="run();">
+    </form>
+   
   <pre id="curr_event"> </pre>
   <h3 style='font-size: 2vw;'>
     Records</h3>
