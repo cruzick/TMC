@@ -62,7 +62,7 @@ async function downloadData(from, to) {
             .then(response => response.json())
             .then(json => {
                 if (json && json.actions && json.actions.length > 0) {
-
+                    console.log(json.actions.length)
                     pagecount = Math.ceil((json.total.value/1000));
                     
                     retVal = retVal.concat(json.actions);
