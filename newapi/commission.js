@@ -1,23 +1,17 @@
 const zeroPad = (num, places) => String(num).padStart(places, '0')
 
 
-firstrun = 1;
-
 async function run() {
-    
+    let commission = 0;
     resultField = document.getElementById("resultField");
     resultField.textContent = "Loading...";
-    
-    commission = 0;
-    
 
-    if(firstrun==1){
-        firstrun=0;
-        console.log("first run");
-        const from = new Date("2022-03-13T23:50:59.00Z");
-        const to = new Date("2022-03-13T23:59:59.00Z");
-        let results = await downloadData(from,to);
-        const curr_event_lbl = document.getElementById("curr_event");
+    const from = new Date(document.getElementById("start").value);
+    const to = new Date(document.getElementById("end").value);
+    console.log("From: " + from);
+    console.log("To: " + to);
+    let results = await downloadData(from,to);
+    const curr_event_lbl = document.getElementById("curr_event");
     curr_event_lbl.innerHTML = "Current Time-Span" +
                                from.toISOString().replace('T', ' ').substring(0, 19)  + " UTC" +
                                "  -  " +
@@ -37,38 +31,13 @@ async function run() {
 
         resultField.textContent =  "Total Commission: " + commission.toFixed(4);
 
-    }        
-    } else {
-        
-        const fromone = document.getElementById("start").value;
-        const toone = document.getElementById("end").value;
-        let results = await downloadData(fromone,toone);
-        const curr_event_lbl = document.getElementById("curr_event");
-    curr_event_lbl.innerHTML = "Current Time-Span" +
-                               fromone.toISOString().replace('T', ' ').substring(0, 19)  + " UTC" +
-                               "  -  " +
-                               toone.toISOString().replace('T', ' ').substring(0, 19) + " UTC";
-
-    // test for null
-    if (results) {
-        for (let i = 0; i < results.length; i++)   {        
-            //adds up commission
-            if (results[i].act.data.memo == "ALIEN WORLDS - Mined Trilium Profit Share") {
-                commission = results[i].act.data.amount + commission;
-
-            }
-           
-            //console.log(results[i].act.data.amount + " " + i + " " + results[i].timestamp);
-        }
-
-        resultField.textContent =  "Total Commission: " + commission.toFixed(4);
-
     }
-    } 
-    
+} 
 
-    
-}
+
+
+
+
 
 
 

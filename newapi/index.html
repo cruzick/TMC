@@ -6,31 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Commission Report</title>
-  <script src="testapi.js"></script>
+  <script src="commission.js"></script>
 </head>
 
 <body>
    <form>
       <label for="fname">Enter start date/time in the following format: YYYY-MM-DDTHH:MM:SS.00Z</label><br>
-      <input type="text" id="start" name="Start" value="2022-03-14T00:00:00.00Z"><br>
+      <input type="text" id="start" name="Start"><br>
       <label for="lname">Enter end date/time in the following format: YYYY-MM-DDTHH:MM:SS.00Z</label><br>
-      <input type="text" id="end" name="End" value="2022-03-14T23:59:59.00Z"><br><br>
-      <input type="submit" value="Submit" onclick="run();">
+      <input type="text" id="end" name="End" ><br><br>
+      <button type="button" onclick="run();"> Get Resutls </button>
     </form>
    
   <pre id="curr_event"> </pre>
-  <h3 style='font-size: 2vw;'>
-    Records</h3>
-    <pre style='text-align: center;' id="resultField"> </pre>
-    <table id="myTable" class="table">
-        <thead>
-           <tr>
-              <th>Profit Sharing Pot</th>
-              <th>Total Commission</th>
-           </tr>
-        </thead>
-        <tbody id="testBody"></tbody>
-     </table>
+  <pre style='text-align: center;' id="resultField"> </pre>
+    
   
 </body>
 </html>
