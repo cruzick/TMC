@@ -8,8 +8,8 @@ async function run() {
     let resultField = document.getElementById("resultField");
     resultField.textContent = "Loading...";
     totalmined = 0;
-    const from = new Date("2022-03-23T00:00:00Z");
-    const to = new Date("2022-03-23T23:59:59Z");
+    const from = new Date("2022-03-17T00:00:00Z");
+    const to = new Date("2022-03-24T23:59:59Z");
     let results = await downloadData(from, to);
     let usedResultsCnt = 0;
 
@@ -134,7 +134,7 @@ async function downloadData(from, to) {
         // because then the full sized poll will be returned (limit)
         // BUT AW has a bug, when the 'from' and 'to' is really near, and there are no action inside that interval
         // the API fails to return anything instead of returning an empty array in the response
-        let querry = 'https://api.alienworlds.io/v1/alienworlds/mines?landowner=aulxo.wam' +
+        let querry = 'https://api.alienworlds.io/v1/alienworlds/mines?landowner=lbjji.wam' +
             '&sort=desc' +
             '&limit=2000';
 
